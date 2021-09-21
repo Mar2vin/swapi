@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Star Jedi";
+  src: url(../font/stjelogo/Strjmono.ttf);
+}
+@font-face {
+  font-family: "Star Jedi Hollow";
+  src: url(../font/stjedihol/Starjhol.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("../img/space.png");
+}
+h1 {
+  text-align: center;
+  font-size: 120px;
+  margin: 35px;
+  font-family: "Star Jedi";
+  color: black;
+
+  background-color: black;
+  text-shadow: 0 0 15px #f8da00, 0 0 30px #f8da00, 0 0 80px #f8da00;
+  animation: animate 3s linear infinite;
+}
+@keyframes animate {
+  0% {
+    text-shadow: 0 0 50px, inset 0 0 50px;
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    text-shadow: 0 0 60px, inset 0 0 60px;
+  }
+  40% {
+    text-shadow: 0 0 40px, inset 0 0 40px;
+  }
+  60% {
+    text-shadow: 0 0 80px, inset 0 0 80px;
+  }
+  80% {
+    text-shadow: 0 0 100px, inset 0 0 100px;
+  }
+  100% {
+    text-shadow: 0 0 2000px, inset 0 0 2000px;
+    filter: hue-rotate(360deg);
+  }
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 40px;
+  margin: 40px;
+  font-family: "Star Jedi Hollow";
+  color: #f8da00;
+  flex-wrap: wrap;
+}
+.bout {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.bout:hover {
+  color: #000000;
+  text-shadow: 0 0 15px #f8da00;
+  transform: scale(1.05);
+}
+.bout::after {
+  content: "";
+  width: 0%;
+  margin-left: 50%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  border-radius: 40%;
+  transition: all 1.5s;
+  position: absolute;
+}
+.bout:hover::after,
+.bout:focus {
+  background-color: #ffee00;
+  width: 62%;
+  margin-left: 20%;
+  box-shadow: 0px 0px 15px #fbff00;
+  transform: scale(1.5);
+}
+#liste {
+  width: 90px;
+  padding: 30px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ligne {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+.ligne:hover {
+  box-shadow: 0px 0px 15px #fbff00;
+  background: #fbff00;
+  color: #000000;
+}
